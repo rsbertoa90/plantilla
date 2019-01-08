@@ -1,5 +1,8 @@
 <template>
     <div class="mt-4">
+
+            <mfcarteras v-if="$mq!='lg'" class="mt-1 mb-3"></mfcarteras>
+
         <div class="row bg-first footer-row ">
             <a  href="/cotizador" class=" col-12 col-lg-3 offset-lg-1 white-bold d-flex 
                         justify-content-center align-items-center bg-focus p-2 ">
@@ -65,7 +68,11 @@
 </template>
 
 <script>
+import mfcarteras from '../../banners/mfcarteras.vue';
 export default {
+    components:{
+        mfcarteras
+    },
     data(){
         return{
             suscriptionMail:null

@@ -5,15 +5,15 @@
   <h2 class="mb-4">Ofertas de Mates Fabi</h2>
       <!-- swiper -->
       <swiper :options="swiperOption" v-if="render">
-        <swiper-slide  v-for="product in offers" :key="product.id" 
-                      v-if="!product.paused" class="d-flex align-items-stretch">
+        <swiper-slide  v-for="product in notpausedoffers" :key="product.id" 
+                       class="d-flex align-items-stretch">
             <div class="card" itemscope itemtype="https://schema.org/Product">
                 <v-lazy-image v-if="product.images[0]" class="card-img card-img-top" 
                       :src="product.images[0].url"
                       :title="product.name"
                       itemprop="image" 
                       alt="Card image cap" />
-                  <v-lazy-image v-else src="/storage/images/app/no-image.png" alt="no image" />>
+                  <v-lazy-image v-else src="/storage/images/app/no-image.png" alt="no image" />
                   <div class="card-img-overlay">
                     <span v-if="product.offer" class=" badge bg-focus white-bold"> Oferta! </span>
                   </div>
@@ -67,10 +67,17 @@
         this.render=true;
     },
     computed:{
-     
-        offers(){
-          
-            return this.$store.getters['categories/getOffers'];
+      offers(){
+        
+        return this.$store.getters['categories/getOffers'];
+        },
+        notpausedoffers(){
+          if (this.offers)
+          {
+            return this.offers.filter(prod => {
+              return !prod.paused;
+            });
+          }
         }
     },
     methods: {
