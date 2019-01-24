@@ -7,7 +7,7 @@
               
             <div class="card" itemscope itemtype="https://schema.org/Product">
                 <a :href="category.slug"  class="d-block w-100" itemprop="url">
-                    <v-lazy-image itemprop="image" class="card-img-top" :src="category.image" 
+                    <v-lazy-image itemprop="image" class="card-img-top onhover" :src="category.image" 
                                             :alt="category.name" />
                     <div class="card-body">
                         <h5 class="card-title" itemprop="name"> {{category.name | ucFirst}} </h5>
@@ -29,3 +29,15 @@ export default {
     }
 }
 </script>
+
+<style scoped lang="scss">
+        .card-img-top{
+            overflow:hidden;
+        }
+
+            .onhover:hover{
+                 transform: scale(1.2);
+                transition: all 1s;
+            }           
+        
+</style>
