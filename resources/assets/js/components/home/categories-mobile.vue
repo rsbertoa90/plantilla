@@ -31,13 +31,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-        .card-img-top{
-            overflow:hidden;
-        }
-
-            .onhover:hover{
-                 transform: scale(1.2);
-                transition: all 1s;
-            }           
-        
+      
 </style>

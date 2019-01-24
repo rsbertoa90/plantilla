@@ -7,8 +7,10 @@
                 
                 <div class="card" itemscope itemtype="https://schema.org/Product">
                     <a :href="category.slug"  class="d-block w-100 overflow-hidden" itemprop="url">
-                        <v-lazy-image itemprop="image" class="onhover card-img-top" :src="category.image" 
-                                                :alt="category.name" />
+                        <div class="card-img-top overflow-hidden">
+                            <v-lazy-image itemprop="image" class=" onhover" :src="category.image" 
+                                                    :alt="category.name" />
+                        </div>
                         <div class="card-body"> 
                             <h5 class="card-title" itemprop="name"> {{category.name | ucFirst}} </h5>
                             <p v-if="category.homedescription" class="texto card-text crop-text" itemprop="description"> {{category.homedescription}} </p>
