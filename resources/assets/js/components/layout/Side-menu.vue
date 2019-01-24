@@ -10,17 +10,17 @@
                        </li>
                    </ul>
                 </div>
-                <mfcarteras v-if="$mq == 'lg'"></mfcarteras>
+             
         </div>
  
 </template>
 
 <script>
-import mfcarteras from '../banners/mfcarteras.vue';
+
 import { mapGetters } from 'vuex';
 export default {
     components:{
-        mfcarteras
+        
     },
     computed : {
            ...mapGetters({
