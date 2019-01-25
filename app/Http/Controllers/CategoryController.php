@@ -105,7 +105,7 @@ class CategoryController extends Controller
 
     public function getAll()
     {
-        return Category::with('products.images')->with('products.category')->get();
+        return Category::with('products.images')->with('products.category')->orderBy('name')->get();
     }
 
     public function update(Request $request)

@@ -11,7 +11,7 @@ class PdfController extends Controller
 {
     public function prices()
     {
-        $categories = Category::all();
+        $categories = Category::orderBy('name')->get();
         $today = Carbon::now()->format('d/m/Y');
         $logo = $this->imageEmbed(public_path('/storage/images/app/logo.png'));
         $pdf = PDF::loadView('pdf.ListaDePrecios', compact('categories','today','logo'));
