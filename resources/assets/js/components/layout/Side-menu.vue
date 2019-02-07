@@ -10,17 +10,19 @@
                        </li>
                    </ul>
                 </div>
-             
+
+
+             <bannerRedlimp></bannerRedlimp>
         </div>
  
 </template>
 
 <script>
-
+import bannerRedlimp from '../banners/redlimp.vue'
 import { mapGetters } from 'vuex';
 export default {
     components:{
-        
+        bannerRedlimp
     },
     computed : {
            ...mapGetters({
