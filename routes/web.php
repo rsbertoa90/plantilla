@@ -26,6 +26,8 @@ Route::middleware('CheckSuper')->prefix('super')->group(function(){
 
 Route::middleware('CheckAdmin')->prefix('admin')->group(function(){
 
+    Route::get('/lista-de-precios','PdfController@prices');
+
     Route::get('/','AdminController@cotizador');
     Route::get('/cotizador','AdminController@cotizador');
 
@@ -78,7 +80,7 @@ Route::get('/getUser','HomeController@getUser');
 
 Route::post('/cotizer/send','OrderController@create');
 
-Route::get('/lista-de-precios','PdfController@prices');
+
 
 Route::post('/suscription','SuscriptionController@create');
 

@@ -4,7 +4,10 @@
             <h2>Metadata de paginas</h2>
             <hr>
         </div>
+   
         
+        <hr>
+
         <div class="col-12 col-lg-4 d-flex flex-column">
             <button v-for="meta in metadatas" 
                     :key="meta.id"

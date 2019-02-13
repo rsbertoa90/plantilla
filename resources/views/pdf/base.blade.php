@@ -321,6 +321,8 @@
                 /* text-align: center;
                 line-height: 35px; */
             }
+            
+            
 
             footer {
                 position: fixed; 
@@ -357,7 +359,8 @@
             <img style="width: 70px" src="{{$logo}}" alt="Mates Fabi" />
           @endif
         </span>
-        <hr> 
+       
+         
       </div>
       <div class="datediv" > 
         @if (isset($order))
@@ -370,6 +373,7 @@
   </header>
     
     <main>
+    
       @yield('content')
     </main>
     

@@ -1,6 +1,12 @@
 <template>
     
     <div class="row">
+             <div class="col-12">
+            <a href="/admin/lista-de-precios" class="btn btn-outline-info">  
+                Refrescar Lista de Precios
+            </a>
+        </div>
+        
         <div class="col-12">
             <hr>
             <super-categories></super-categories>

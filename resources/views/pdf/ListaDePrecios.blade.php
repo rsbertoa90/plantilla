@@ -11,8 +11,8 @@
 
       @foreach ($categories as $category)
        {{-- <div class="breakNow"></div> --}}
-          <hr>
-          <div style="text-align: center ; width :100vw"></div>
+         
+          <div style="text-align: center ; width :100vw ; margin-top:30px;"></div>
               <h2> {{strtoupper($category->name)}} </h2>
           </div>
           <hr>                 

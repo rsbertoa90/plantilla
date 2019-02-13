@@ -3,7 +3,7 @@
         <div class="row">
             <h1 class="col-12 col-lg-6 text-center" v-if="user && user.role_id > 2">Hace tu pedido</h1>
             <h1 class="col-12 col-lg-6 text-center" v-else>Tomar pedido</h1>
-            <a href="/lista-de-precios" class="col-12 col-lg-6 btn btn-lg btn-outline-info"> <span class="fa fa-download"></span> Descargar lista de precios</a>
+            <a href="/mates-fabi.pdf" target="_blank" class="col-12 col-lg-6 btn btn-lg btn-outline-info"> <span class="fa fa-download"></span> Descargar lista de precios</a>
         </div>
         <div class="row mt-2">
             <div class="col-12 d-flex justify-content-center align-items-center">
