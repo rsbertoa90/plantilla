@@ -5,6 +5,9 @@
             <a href="/admin/lista-de-precios" class="btn btn-outline-info">  
                 Refrescar Lista de Precios
             </a>
+            <a href="/super/failed-jobs" class="btn btn-outline-danger">  
+                Failed jobs
+            </a>
         </div>
         
         <div class="col-12">

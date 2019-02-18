@@ -32,6 +32,7 @@ Vue.component('app-cotizer', require('./components/cotizer/Cotizer.vue'));
 Vue.component('cotizer-form', require('./components/cotizer/Cotizer-form.vue'));
 // Vue.component('csrf', require('./components/csrf.vue'));
 Vue.component('app-admin', require('./components/admin/Admin.vue'));
+Vue.component('admin-failed-jobs', require('./components/failedJobs/FailedJobs.vue'));
 Vue.component('app-navbar', require('./components/layout/Navbar.vue'));
 Vue.component('app-footer', require('./components/layout/footer/Footer.vue'));
 Vue.component('app-whatsapp', require('./components/layout/Whatsapp-float.vue'));

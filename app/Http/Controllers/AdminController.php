@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\FailedJob;
 class AdminController extends Controller
 {
     
@@ -23,5 +24,10 @@ class AdminController extends Controller
     {
         $user = Auth::user();
         return view('admin.orders',compact('user'));
+    }
+
+    public function failedJobs()
+    {
+        return FailedJob::all()->orderby('failed_at','desc');
     }
 }

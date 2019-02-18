@@ -11,4 +11,9 @@ class SuperController extends Controller
         $user = Auth::user();
         return view('admin.super',compact('user'));
     }
+
+    public function failedJobsView()
+    {
+        return view('admin.failedJobs');
+    }
 }

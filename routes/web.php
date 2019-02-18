@@ -15,6 +15,9 @@
 Auth::routes();
 
 Route::middleware('CheckSuper')->prefix('super')->group(function(){
+
+    Route::get('/failed-jobs','SuperController@failedJobsView');
+
     Route::get('/', 'SuperController@panel');
 
     Route::post('/category/image','CategoryController@uploadImage')->middleware('OptimizeImages');
