@@ -135,7 +135,7 @@ export default{
         minBuy(){
            if(this.user && this.user.role_id > 2)
            {
-              return this.formData.shipping ? 3000 : 1500 ;
+              return this.formData.shipping ? 5000 : 2500 ;
            }
            return 1;
         },
