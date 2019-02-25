@@ -12,7 +12,7 @@
             </div>
             <div  class="col-12 d-flex justify-content-center align-items-center">
                  <span class="fas fa-hand-holding-usd text-focus icono"></span> 
-                    <p>Compra mínima por local $1500, para envíos $3000. (Los precios publicados son sin IVA) Formas de pago: Efectivo o Deposito/Transferencia Bancaria</p>
+                    <p>Compra mínima por local $2500, para envíos $5000. (Los precios publicados son sin IVA) Formas de pago: Efectivo o Deposito/Transferencia Bancaria</p>
             </div>
         </div>
 
