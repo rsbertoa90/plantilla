@@ -10,9 +10,9 @@
                 <span class="fa fa-truck text-focus icono"></span> 
                 <p> La compra es entregada sin cargo al transporte de carga elegido por el cliente. Los despachos se realizan de 1 a 5 días hábiles a partir del informe y acreditación del pago.</p>
             </div>
-            <div  class="col-12 d-flex justify-content-center align-items-center">
+            <div v-if="configs" class="col-12 d-flex justify-content-center align-items-center">
                  <span class="fas fa-hand-holding-usd text-focus icono"></span> 
-                    <p>Compra mínima por local $2500, para envíos $5000. (Los precios publicados son sin IVA) Formas de pago: Efectivo o Deposito/Transferencia Bancaria</p>
+                    <p>Compra mínima por local ${{configs.minbuy}}, para envíos ${{configs.minbuy_ship}}. (Los precios publicados son sin IVA) Formas de pago: Efectivo o Deposito/Transferencia Bancaria</p>
             </div>
         </div>
 
@@ -198,7 +198,8 @@
         computed: {
             ...mapGetters({
                 categories : 'categories/getCategories',
-               user : 'getUser'
+               user : 'getUser',
+               configs: 'getConfig'
             }),
             
             total() {

@@ -41,9 +41,9 @@
                             <i class="fas fa-hand-holding-usd"></i>
                             <span class="ml-2">Somos fabricantes!</span>
                         </div>
-                        <div class="col-12 d-flex flex-column">
-                            <span><i class="fa fa-check"></i> Compra minima en local: $1500</span>
-                            <span><i class="fa fa-check"></i> Compra minima para envios: $3000</span>
+                        <div class="col-12 d-flex flex-column" v-if="configs">
+                            <span><i class="fa fa-check"></i> Compra minima en local: ${{configs.minbuy}}</span>
+                            <span><i class="fa fa-check"></i> Compra minima para envios: ${{configs.minbuy_ship}}</span>
                             <span><i class="fa fa-check"></i> Los despachos se realizaran de 1 a 5 días hábiles a partir del informe y acreditación del pago</span>
                         </div>
                     </div>
@@ -67,6 +67,9 @@ export default {
         }
     },
     computed:{
+        configs(){
+            return this.$store.getters.getConfig;
+        },
         product(){
             return this.$store.getters['categories/getProduct'](this.product_id);
         },

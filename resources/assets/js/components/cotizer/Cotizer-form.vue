@@ -132,12 +132,17 @@ export default{
        
     }},
     computed : {
+        configs(){
+            return this.$store.getters.getConfig;
+        },
         minBuy(){
-           if(this.user && this.user.role_id > 2)
-           {
-              return this.formData.shipping ? 5000 : 2500 ;
-           }
-           return 1;
+            if(this.configs){
+                if (this.formData.shipping){
+                    return this.configs.minbuy_ship;
+                }else{
+                    return this.configs.minbuy;
+                } 
+            }
         },
         user(){
             return this.$store.getters.getUser;
@@ -173,9 +178,9 @@ export default{
             {   
                 swal('No hay productos seleccionados','','error');
                 return false;
-            } else if (this.total < this.minBuy)
+            } else if (this.total < this.fongi)
             {
-                swal('El minimo de compra es de $'+this.minBuy,'','error');
+                swal('El minimo de compra es de $'+this.fongi,'','error');
                 return false;
             } else {return true;}
         },

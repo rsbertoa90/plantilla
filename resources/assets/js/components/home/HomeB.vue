@@ -1,10 +1,10 @@
 <template>
     <div class="container">
-        <div class="row p-5">
+        <div class="row p-5" v-if="configs">
             <h1>Mayorista Mates Fabi</h1>
             <p>
                 En Mayorista Mates Fabi tenemos precios y diseños únicos. Somos fabricante. Podes visitar nuestras sucursales ubicadas en Once de lunes a viernes de 9 a 18 hs o hacer tu pedido Online. Hacemos envíos a todo el país
-                Compra mínima por local $2500, para envíos $5000.
+                Compra mínima por local ${{configs.minbuy}}, para envíos ${{configs.minbuy_ship}}.
             </p> 
             <p>  
                 La compra es entregada sin cargo al transporte de carga elegido por el cliente.
@@ -51,6 +51,11 @@ export default {
         homeOffers,
         'home-categories-mobile' : homeCategoriesMobile,
         'home-categories-wide' : homeCategoriesWide
+    },
+    computed:{
+        configs(){
+            return this.$store.getters.getConfig;
+        }
     }
 }
 </script>
