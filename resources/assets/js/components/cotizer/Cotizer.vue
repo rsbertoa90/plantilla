@@ -69,7 +69,7 @@
                 </div>
                 <div :id="'acordion'+category.id" class="collapse collapsed " aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
-                       <table class="table table-striped table-bordered " v-if="selectedCategory==category">
+                       <table class="table table-striped table-bordered " >
                            <thead class="">
                                <th>Foto</th>
                                 <th v-if="user && user.role_id < 3">Codigo</th>
@@ -78,7 +78,7 @@
                                <th>Quiero</th>
                                
                            </thead>
-                           <tbody>
+                           <tbody v-if="selectedCategory==category.id">
                                <tr v-for="product in category.products" :key="product.id" v-if="!product.paused">
                                    <td @click="show(product)" >
                                         <v-lazy-image v-if="product.images.length > 0" 
