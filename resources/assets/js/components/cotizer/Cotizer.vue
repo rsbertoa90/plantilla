@@ -55,7 +55,8 @@
                                 data-toggle="collapse" 
                                 :data-target="'#acordion'+category.id" 
                                 aria-expanded="true" 
-                                :aria-controls="category.name">
+                                :aria-controls="category.name"
+                                @click="selectedCategory=category.id">
                                    <div class="category-miniature">
                                         <v-lazy-image :src="category.image"></v-lazy-image>
                                     </div>
@@ -68,7 +69,7 @@
                 </div>
                 <div :id="'acordion'+category.id" class="collapse collapsed " aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
-                       <table class="table table-striped table-bordered ">
+                       <table class="table table-striped table-bordered " v-if="selectedCategory==category">
                            <thead class="">
                                <th>Foto</th>
                                 <th v-if="user && user.role_id < 3">Codigo</th>
@@ -147,6 +148,7 @@
         components : {carousel,pedido,tutorial},
         data(){
             return {
+                selectedCategory:null,
                 selector:{
                     code:'',
                     name:'',
