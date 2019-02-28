@@ -178,9 +178,9 @@ export default{
             {   
                 swal('No hay productos seleccionados','','error');
                 return false;
-            } else if (this.total < this.fongi)
+            } else if (this.total < this.minBuy)
             {
-                swal('El minimo de compra es de $'+this.fongi,'','error');
+                swal('El minimo de compra es de $'+this.minBuy,'','error');
                 return false;
             } else {return true;}
         },
