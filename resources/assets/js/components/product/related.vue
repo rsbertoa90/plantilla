@@ -6,7 +6,7 @@
       <!-- swiper -->
       <swiper :options="swiperOption" v-if="render">
         <swiper-slide  v-for="product in products" :key="product.id" v-if="!product.paused">
-            <div class="card" itemscope itemtype="https://schema.org/Product">
+            <a :href="product.slug" class="card" itemscope itemtype="https://schema.org/Product">
                 <div>
                   <v-lazy-image v-if ="product.images[0]" class="card-img card-img-top" 
                         :src="product.images[0].url"
@@ -28,7 +28,7 @@
                     <a :href="product.slug" style="cursor:pointer" class="btn btn-outline-second  white-bold mb-4 mt-1"> Ver mas</a>
                     <p></p>
                 </div>
-            </div>
+            </a>
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
         <div class="swiper-button-prev" slot="button-prev"></div>
