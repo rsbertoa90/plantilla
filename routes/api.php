@@ -17,8 +17,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/categories','CategoryController@getAll');
-
 Route::get('/metadatas','MetadataController@getAll');
 
 Route::get('/states','StateController@get');

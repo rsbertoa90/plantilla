@@ -75,28 +75,23 @@
             <app-whatsapp></app-whatsapp>
             <div class="row">
                 <app-navbar class="col-12"></app-navbar>
-                <app-side-menu class="col-3" 
-                                v-if="$mq =='lg'" 
-                                style="margin-left:-6%">
-                </app-side-menu>
+               
 
-                    <div class="col-12 col-lg-9 w-100 row" style="margin-left:0.2%">
-                                <main class="py-4 w-100 row">
-                                    <div class="col-12">
-                                        @yield('breadcrumb')
-                                    </div>
-                                    <div class="col-12">
-                                        @yield('contentA')
-                                    </div>
+                <div class="col-12 w-100 row" style="margin-left:0.2%">
+                    <main class="py-4 w-100 row">
+                        <div class="col-12">
+                            @yield('breadcrumb')
+                        </div>
+                        <div class="col-12">
+                            @yield('content')
+                        </div>
 
-                                </main>
+                    </main>
                     
-                    </div> 
+                </div> 
     
             </div>
-            <div class="row">
-                @yield('contentB')
-            </div>
+          
             <app-footer></app-footer>
         </div>
     </div>
