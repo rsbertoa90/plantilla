@@ -30,17 +30,18 @@ import VueMq from 'vue-mq'
 Vue.component('fade-loader', require('vue-spinner/src/FadeLoader.vue'));
 
 // Vue.component('csrf', require('./components/csrf.vue'));
-Vue.component('app-admin', require('./components/admin/Admin.vue'));
-Vue.component('admin-failed-jobs', require('./components/failedJobs/FailedJobs.vue'));
-Vue.component('app-navbar', require('./components/layout/Navbar.vue'));
+/* Vue.component('app-admin', require('./components/admin/Admin.vue'));
+Vue.component('admin-failed-jobs', require('./components/failedJobs/FailedJobs.vue')); */
+Vue.component('app-navbar', require('./components/layout/navbar/navbar.vue'));
 Vue.component('app-footer', require('./components/layout/footer/Footer.vue'));
 Vue.component('app-whatsapp', require('./components/layout/Whatsapp-float.vue'));
-Vue.component('app-admin', require('./components/admin/Admin.vue'));
-Vue.component('app-super', require('./components/super/Super.vue'));
-Vue.component('image-logo', require('./components/layout/images/image-logo.vue'));
-Vue.component('app-side-menu', require('./components/layout/Side-menu.vue'));
 
-Vue.component('app-home-a', require('./components/home/Home.vue'));
+/* Vue.component('app-admin', require('./components/admin/Admin.vue'));
+Vue.component('app-super', require('./components/super/Super.vue')); */
+Vue.component('image-logo', require('./components/layout/images/image-logo.vue'));
+
+
+Vue.component('app-home', require('./components/home/Home.vue'));
 
 import swal from 'sweetalert';
 window.swal = swal;
